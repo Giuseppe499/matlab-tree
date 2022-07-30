@@ -1,4 +1,4 @@
-classdef tree
+classdef tree < handle
 %% TREE  A class implementing a tree data structure.
 %
 % This class implements a simple tree data structure. Each node can only
