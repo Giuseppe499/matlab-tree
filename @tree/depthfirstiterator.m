@@ -42,8 +42,14 @@ function IDs = depthfirstiterator(obj, startNode, sorted)
     if nargin < 3
         sorted = false;
     end
-
+    
+    if ~isnan(obj.IDsDepthFirstIterator)
+        IDs = obj.IDsDepthFirstIterator;
+        return;
+    end
+    
     IDs = recurse(startNode);
+    obj.IDsDepthFirstIterator = IDs;
 
     function val = recurse(node)
         

@@ -20,6 +20,11 @@ function iterator = breadthfirstiterator(obj, sorted)
     if nargin < 2
         sorted = false;
     end
+    
+    if ~isnan(obj.IDsBreadthFirstIterator)
+        iterator = obj.IDsBreadthFirstIterator;
+        return;
+    end
 
     f = obj.flatten;
     
@@ -34,5 +39,6 @@ function iterator = breadthfirstiterator(obj, sorted)
     end
     
     iterator = [ f{:} ];
+    obj.IDsBreadthFirstIterator = iterator;
 
 end

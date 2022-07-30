@@ -27,6 +27,9 @@ classdef tree < handle
         % Index of the parent node. The root of the tree as a parent index
         % equal to 0.
         Parent = [ 0 ]; %#ok<NBRAK>
+
+        IDsDepthFirstIterator = nan;
+        IDsBreadthFirstIterator = nan;
         
     end
     
@@ -73,6 +76,8 @@ classdef tree < handle
                     end
                 else
                     obj.Node = content.Node;
+                    obj.IDsDepthFirstIterator = content.IDsDepthFirstIterator;
+                    obj.IDsBreadthFirstIterator = content.IDsBreadthFirstIterator;
                 end
                 
             else
