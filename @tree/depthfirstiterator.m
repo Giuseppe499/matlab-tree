@@ -1,4 +1,4 @@
-function IDs = depthfirstiterator(obj, startNode, sorted)
+function IDs = depthfirstiterator(obj, sorted)
 %%DEPTHFIRSTITERATOR  Index sequence traversing the tree, depth first.
 % 
 % iterator = tree.DEPTHFIRSTITERATOR return a line vector of indices that
@@ -37,9 +37,6 @@ function IDs = depthfirstiterator(obj, startNode, sorted)
 % disp(content)
 
     if nargin < 2
-        startNode = 1;
-    end
-    if nargin < 3
         sorted = false;
     end
     
@@ -48,7 +45,7 @@ function IDs = depthfirstiterator(obj, startNode, sorted)
         return;
     end
     
-    IDs = recurse(startNode);
+    IDs = recurse(1);
     obj.IDsDepthFirstIterator = IDs;
 
     function val = recurse(node)

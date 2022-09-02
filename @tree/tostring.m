@@ -53,7 +53,7 @@ function str = tostring(obj, sorted)
     nLevels = obj.depth + 1;
     depth = obj.depthtree;
     
-    iterator = obj.depthfirstiterator(1, sorted);
+    iterator = obj.depthfirstiterator(sorted);
     
     str = repmat(' ', 3 * nLevels - 2, spaceTree.get(1));
     

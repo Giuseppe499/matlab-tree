@@ -30,6 +30,7 @@ classdef tree < handle
 
         IDsDepthFirstIterator = nan;
         IDsBreadthFirstIterator = nan;
+        IDsLeafs = nan;
         
     end
     
@@ -78,6 +79,7 @@ classdef tree < handle
                     obj.Node = content.Node;
                     obj.IDsDepthFirstIterator = content.IDsDepthFirstIterator;
                     obj.IDsBreadthFirstIterator = content.IDsBreadthFirstIterator;
+                    obj.IDsLeafs = content.IDsLeafs;
                 end
                 
             else
